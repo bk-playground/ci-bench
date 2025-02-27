@@ -1,0 +1,10 @@
+steps:
+  - label: "Run build steps"
+    commands:
+      - ./record-system-info.sh 
+      - ./install-deps-debian.sh
+      - ./download-kernel.sh
+      - ./build-kernel.sh
+    artifact_paths:
+      - "compile_time_output.txt"
+      - "system_info.txt"
