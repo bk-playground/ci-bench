@@ -2,7 +2,7 @@ steps:
   - label: "Run build steps"
     commands:
       - ./record-system-info.sh 
-      - ./install-deps-debian.sh
+      - ./install-deps-amzlinux.sh
       - ./download-kernel.sh
       - ./build-kernel.sh
     artifact_paths:
