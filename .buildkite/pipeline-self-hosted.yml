@@ -7,3 +7,5 @@ steps:
           config: .buildkite/docker-compose.yml
           shell: false
           command: ["bash", "-x", "/src/build-kernel.sh"]
+    artifact_paths:
+      - "system_info.txt"
