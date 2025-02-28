@@ -1,0 +1,7 @@
+name: ci-bench
+services:
+  compile:
+    build: ../
+    working_dir: /usr/src
+    volumes:
+      - ../:/src
