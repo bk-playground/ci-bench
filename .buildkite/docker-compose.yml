@@ -2,6 +2,7 @@ name: ci-bench
 services:
   compile:
     build: ../
+    progress: plain
     working_dir: /usr/src
     volumes:
       - ../:/src
