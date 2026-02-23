@@ -1,10 +1,11 @@
 steps:
-  - label: "Run build steps"
-    commands:
-      - ./record-system-info.sh 
-      - ./install-deps-amzlinux.sh
-      - ./download-kernel.sh
-      - ./build-kernel.sh
+  - label: ":linux: compile"
+    key: compile
+    plugins:
+      - docker-compose#v5.3.0:
+          run: compile
+          config: .buildkite/docker-compose.yml
+          shell: false
+          command: ["bash", "-x", "/src/build-kernel.sh"]
     artifact_paths:
-      - "compile_time_output.txt"
       - "system_info.txt"
